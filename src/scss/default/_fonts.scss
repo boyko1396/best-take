@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'TT Norms';
+    src: url('../fonts/TTNorms-Regular.eot');
+    src: url('../fonts/TTNorms-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTNorms-Regular.woff2') format('woff2'),
+         url('../fonts/TTNorms-Regular.woff') format('woff'),
+         url('../fonts/TTNorms-Regular.ttf') format('truetype'),
+         url('../fonts/TTNorms-Regular.svg#TTNorms-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('../fonts/TTNorms-Medium.eot');
+    src: url('../fonts/TTNorms-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTNorms-Medium.woff2') format('woff2'),
+         url('../fonts/TTNorms-Medium.woff') format('woff'),
+         url('../fonts/TTNorms-Medium.ttf') format('truetype'),
+         url('../fonts/TTNorms-Medium.svg#TTNorms-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('../fonts/TTNorms-Bold.eot');
+    src: url('../fonts/TTNorms-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTNorms-Bold.woff2') format('woff2'),
+         url('../fonts/TTNorms-Bold.woff') format('woff'),
+         url('../fonts/TTNorms-Bold.ttf') format('truetype'),
+         url('../fonts/TTNorms-Bold.svg#TTNorms-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('../fonts/TTNorms-Light.eot');
+    src: url('../fonts/TTNorms-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTNorms-Light.woff2') format('woff2'),
+         url('../fonts/TTNorms-Light.woff') format('woff'),
+         url('../fonts/TTNorms-Light.ttf') format('truetype'),
+         url('../fonts/TTNorms-Light.svg#TTNorms-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('../fonts/TTNorms-Black.eot');
+    src: url('../fonts/TTNorms-Black.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTNorms-Black.woff2') format('woff2'),
+         url('../fonts/TTNorms-Black.woff') format('woff'),
+         url('../fonts/TTNorms-Black.ttf') format('truetype'),
+         url('../fonts/TTNorms-Black.svg#TTNorms-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

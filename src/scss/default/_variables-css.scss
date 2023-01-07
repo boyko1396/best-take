@@ -1,0 +1,17 @@
+:root {
+    --fs-default: 18px;
+    --fs-1: 108.46px;
+    --fs-2: 52.62px;
+    --fs-3: 32px;
+    --fs-4: 24px;
+    --fs-5: 20px;
+    --fs-6: 18px;
+
+    --gap: 10px;
+    --gap-: -10px;
+    --gap-fluid: 20px;
+    --gap-fluid-: -20px;
+}
+
+@media (max-width: $md) {
+}

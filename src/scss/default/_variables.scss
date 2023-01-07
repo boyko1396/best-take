@@ -1,0 +1,55 @@
+// typography
+$ff-default: 'TT Norms', Arial, sans-serif;
+
+// pallets
+$color-black-1: #191E21;
+$color-black-2: #777777;
+$color-black-3: #222931;
+$color-black-4: #0B131B;
+$color-black-5: #494949;
+$color-black-6: #121C25;
+$color-black-7: #0E1323;
+$color-white-1: #ffffff;
+$color-gray-1: #E9E9E9;
+$color-gray-2: #A6A6A6;
+$color-gray-3: #ADADAD;
+$color-gray-4: #C1C1C1;
+$color-gray-5: #979797;
+$color-gray-6: #C7C7C7;
+$color-gray-7: #E6E6E6;
+$color-accent-1: #FFB13C;
+$color-accent-2: #FFB74B;
+$color-accent-3: #FFDB80;
+$color-accent-4: #FFBB54;
+$color-accent-5: #DFBF93;
+$color-accent-6: #FFC368;
+$color-accent-7: #FFD89D;
+$color-blue-1: #3F5367;
+$color-blue-2: #41505F;
+$color-blue-3: #22303E;
+$color-blue-4: #57759A;
+$color-blue-5: #354453;
+$color-red-1: #ff4a35;
+$color-brown-1: #4E463B;
+
+// gradients
+$gradient-accent-mirror: linear-gradient(95.73deg,$color-accent-2 0%,$color-accent-3 50%,$color-accent-4 100%);
+$gradient-accent: linear-gradient(95.73deg,$color-accent-2 0%,$color-accent-3 100%);
+$gradient-white: linear-gradient(180deg,$color-white-1 0%,$color-black-2 100%);
+$gradient-gray-mirror: linear-gradient(180deg,rgba($color-gray-5,0) 0%,$color-gray-5 50%,rgba($color-gray-5,0) 100%);
+
+// breakpoints
+$xl: 1440px;
+$xl-mf: $xl + 1;
+
+$lg: 1199px;
+$lg-mf: $lg + 1;
+
+$md: 991px;
+$md-mf: $md + 1;
+
+$sm: 767px;
+$sm-mf: $sm + 1;
+
+$xs: 576px;
+$xs-mf: $xs;

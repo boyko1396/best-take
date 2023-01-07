@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+html(lang='ru')
+  include includes/head.pug
+
+  body
+
+    #root
+      include includes/header.pug
+
+      main(role="main").main
+        section.intro
+          #js-intro-parallax.parallax-scene.intro__parallax
+            .intro__coin
+              picture(data-depth="-.1").js-parallax-layer.parallax-item.parallax-item--1.intro__coin-item.intro__coin-item--1
+                img(src="images/decor-4.png" srcset="images/decor-4@2x.png 2x" width="162" height="167")
+              picture(data-depth=".5").js-parallax-layer.parallax-item.parallax-item--2.intro__coin-item.intro__coin-item--2
+                img(src="images/decor-1.png" srcset="images/decor-1@2x.png 2x" width="145" height="156")
+              picture(data-depth=".2").js-parallax-layer.parallax-item.parallax-item--3.intro__coin-item.intro__coin-item--3
+                img(src="images/decor-5.png" srcset="images/decor-5@2x.png 2x" width="182" height="177")
+              picture(data-depth="-.4").js-parallax-layer.parallax-item.parallax-item--4.intro__coin-item.intro__coin-item--4
+                img(src="images/decor-2.png" srcset="images/decor-2@2x.png 2x" width="145" height="148")
+              picture(data-depth=".2").js-parallax-layer.parallax-item.parallax-item--1.intro__coin-item.intro__coin-item--5
+                img(src="images/decor-4.png" srcset="images/decor-4@2x.png 2x" width="162" height="167")
+              picture(data-depth=".6").js-parallax-layer.parallax-item.parallax-item--5.intro__coin-item.intro__coin-item--6
+                img(src="images/decor-3.png" srcset="images/decor-3@2x.png 2x" width="167" height="180")
+          picture.intro__hero
+            img(src="images/intro-hero.png" alt="Основы финансового рынка")
+          .container.container--size-md.intro__container
+            .intro__content
+              h1.title-brand.title-brand--size-xl.intro__title
+                span.title-brand__sup Основы
+                span.title-brand__sub финансового рынка
+              .content.intro__description
+                p Как стать грамотным инвестором с&nbsp;нуля&nbsp;за полгода в любом возрасте?
+              .intro__btn-wrap
+                a(href="#modal-form").js-modal-init.btn.btn--size-xl.btn--theme-accent.intro__btn
+                  span.btn__bg
+                  span.btn__inner
+                    span.btn__title Скачать курс
+                .intro__btn-description
+                  span.color-accent Бесплатный
+                  |  видеокурс
+            .intro__benefits
+              .row.intro__benefits-list
+                .row__col--3.intro__benefits-list-col
+                  article.benefits-card.intro__benefits-list-card
+                    .benefits-card__inner
+                      picture.benefits-card__img
+                        img(src="images/benefits-card-1.svg" alt="Постоянный дополнительный доход")
+                      .benefits-card__text Постоянный дополнительный доход
+                .row__col--3.intro__benefits-list-col
+                  article.benefits-card.intro__benefits-list-card
+                    .benefits-card__inner
+                      picture.benefits-card__img
+                        img(src="images/benefits-card-2.svg" alt="Финансовая стабильность")
+                      .benefits-card__text Финансовая стабильность
+                .row__col--3.intro__benefits-list-col
+                  article.benefits-card.intro__benefits-list-card
+                    .benefits-card__inner
+                      picture.benefits-card__img
+                        img(src="images/benefits-card-3.svg" alt="Своя квартира и машина")
+                      .benefits-card__text Своя квартира и&nbsp;машина
+                .row__col--3.intro__benefits-list-col
+                  article.benefits-card.intro__benefits-list-card
+                    .benefits-card__inner
+                      picture.benefits-card__img
+                        img(src="images/benefits-card-4.svg" alt="Финансовая поддержка семьи")
+                      .benefits-card__text Финансовая поддержка семьи
+        section.step-section
+          .container.container--size-md.step-section__container
+            header.step-section__header
+              p.u-suptitle.step-section__suptitle Подходит новичкам и трейдерам с опытом
+              h2.u-title.step-section__title Вы готовы стать практикующим трейдером всего за 4 шага?
+              p.u-subtitle.step-section__subtitle Начни действовать уже сейчас
+            .row.step-section__list
+              .row__col--3.step-section__list-col
+                article.step-card.step-card--theme-simple.step-section__list-card
+                  .step-card__inner
+                    picture.step-card__picture
+                      img(src="images/step-card-1.svg" alt="Скачайте курс, пока он доступен бесплатно")
+                    .step-card__content
+                      h3.step-card__title Сегодня
+                      p.step-card__text Скачайте курс, пока он доступен&nbsp;бесплатно
+              .row__col--3.step-section__list-col
+                article.step-card.step-card--theme-simple.step-section__list-card
+                  .step-card__inner
+                    picture.step-card__picture
+                      img(src="images/step-card-2.svg" alt="Пройдите все занятия видеокурса")
+                    .step-card__content
+                      h3.step-card__title Через неделю
+                      p.step-card__text Пройдите все занятия видеокурса
+              .row__col--3.step-section__list-col
+                article.step-card.step-card--theme-simple.step-section__list-card
+                  .step-card__inner
+                    picture.step-card__picture
+                      img(src="images/step-card-3.svg" alt="Начинайте торговать, используя полученные знания")
+                    .step-card__content
+                      h3.step-card__title Через две недели
+                      p.step-card__text Начинайте торговать, используя полученные знания
+              .row__col--3.step-section__list-col
+                article.step-card.step-card--theme-accent.step-section__list-card
+                  .step-card__inner
+                    .step-card__header
+                      .step-card__content
+                        h3.step-card__title Через месяц
+                        p.step-card__text Получайте прибыль и позвольте себе купить то, о&nbsp;чем мечтаете
+                    .step-card__footer
+                      a(href="#modal-form").js-modal-init.btn.btn--size-md.btn--theme-accent.step-card__footer-btn
+                        span.btn__bg
+                        span.btn__inner
+                          span.btn__title Скачать курс
+        section.meta-section
+          .container.container--size-md.meta-section__container
+            .meta-section__block
+              h2.u-title.meta-section__block-title Этот курс для Вас, если:
+              .meta-section__block-list-wrap
+                ul.list-done.meta-section__block-list
+                  li Вам нужна дополнительная прибыль
+                  li Вы ищете финансовую независимость
+                  li Вам надоело работать за несколько десятков тысяч рублей в месяц
+                  li Готовы учиться, чтобы получать достойные деньги
+                  li Хотите<span class="text-break d-lg-none"></span>заработать миллион
+                  li.list-done__line--clear
+                    a(href="#modal-form").js-modal-init.btn.btn--size-sm.btn--theme-accent
+                      span.btn__bg
+                      span.btn__inner
+                        span.btn__title Скачать курс
+        section.author-section
+          #js-author-parallax.parallax-scene.author-section__parallax
+            .author-section__coin
+              picture(data-depth="-.4").js-parallax-layer.parallax-item.parallax-item--4.author-section__coin-item.author-section__coin-item--1
+                img(src="images/decor-2.png" srcset="images/decor-2@2x.png 2x" width="145" height="148")
+              picture(data-depth="-.1").js-parallax-layer.parallax-item.parallax-item--1.author-section__coin-item.author-section__coin-item--2
+                img(src="images/decor-4.png" srcset="images/decor-4@2x.png 2x" width="162" height="167")
+              picture(data-depth=".6").js-parallax-layer.parallax-item.parallax-item--5.author-section__coin-item.author-section__coin-item--3
+                img(src="images/decor-3.png" srcset="images/decor-3@2x.png 2x" width="167" height="180")
+          .container.container--size-md.author-section__container
+            .row.author-section__row
+              .row__col--6.author-section__col.author-section__col--content
+                p.u-subtitle.author-section__subtitle Об авторе курса
+                h2.u-title.author-section__title Владимир Ставрогин
+                .content.author-section__text
+                  p 34 года, Высшее финансовое<br>образование + бизнес-школа.
+                  p Создает курсы, пишет статьи по финансовым<br>рынкам, ведет еженедельную передачу на РБК-ТВ
+                  p Преподает в ВШЭ, ведет курс -<br>Базовые основы биржевой торговли
+                .author-section__profit
+                  p.author-section__profit-title Доход в месяц за 2022 год:
+                  p.author-section__profit-subtitle <span>5,000 долларов</span><br>или около 300 000 рублей
+                .author-section__footer
+                  a(href="#modal-form").js-modal-init.btn.btn--size-lg.btn--theme-accent.author-section__footer-btn
+                    span.btn__bg
+                    span.btn__inner
+                      span.btn__title Скачать курс
+                  .author-section__footer-content
+                    .title-brand.title-brand--size-sm.author-section__footer-content-brand
+                      span.title-brand__sup Основы
+                      span.title-brand__sub финансового рынка
+                    p.author-section__footer-content-text Как стать грамотным инвестором<br>с нуля за полгода в любом возрасте?
+              .row__col--6.author-section__col.author-section__col--picture
+                picture.author-section__picture
+                  img(src="images/author-section-img.png" alt="Об авторе курса Владимир Ставрогин")
+        section.reviews-section
+          .container.container--size-md.reviews-section__container
+            h2.u-title.reviews-section__title Отзывы
+            p.u-suptitle.reviews-section__suptitle Мнения учеников, которые прошли наш курс
+            .row.reviews-section__list
+              .row__col--4.reviews-section__list-col
+                .reviews-card.reviews-card--theme-simple.reviews-section__list-card
+                  .reviews-card__inner
+                    header.reviews-card__header
+                      picture.reviews-card__picture
+                        img(src="images/reviews-card-1.jpg" alt="Вадим")
+                      .reviews-card__info
+                        .reviews-card__info-name Вадим
+                        .reviews-card__info-age Возраст: 25 лет
+                    p.reviews-card__text Мне было просто и понятно пройти курс, кое-что я проходил в ВУЗе. Понравилось, что затронули все аспекты, включая управление торговыми рисками, что очень важно, на мой взгляд.
+              .row__col--4.reviews-section__list-col
+                .reviews-card.reviews-card--theme-simple.reviews-section__list-card
+                  .reviews-card__inner
+                    header.reviews-card__header
+                      picture.reviews-card__picture
+                        img(src="images/reviews-card-2.jpg" alt="Александр")
+                      .reviews-card__info
+                        .reviews-card__info-name Александр
+                        .reviews-card__info-age Возраст: 46 лет
+                    p.reviews-card__text Около трех месяцев назад прошел этот курс, сейчас уже торгую самостоятельно. Хороший старт для систематического обучения, курс правильно структурирован и несложный даже для новичка
+              .row__col--4.reviews-section__list-col
+                .reviews-card.reviews-card--theme-simple.reviews-section__list-card
+                  .reviews-card__inner
+                    header.reviews-card__header
+                      picture.reviews-card__picture
+                        img(src="images/reviews-card-3.jpg" alt="Светлана")
+                      .reviews-card__info
+                        .reviews-card__info-name Светлана
+                        .reviews-card__info-age Возраст: 52 года
+                    p.reviews-card__text У меня было много свободного времени, поэтому я достаточно быстро прошла курс и сейчас торгую на московской бирже. Очень нравится самостоятельно принимать инвестиционные решения.
+        .main__footer
+          #js-main-footer-parallax.parallax-scene.main__footer-parallax
+            .main__footer-parallax-coin
+              picture(data-depth="-.1").js-parallax-layer.parallax-item.parallax-item--1.main__footer-parallax-coin-item.main__footer-parallax-coin-item--1
+                img(src="images/decor-4.png" srcset="images/decor-4@2x.png 2x" width="162" height="167")
+              picture(data-depth=".3").js-parallax-layer.parallax-item.parallax-item--2.main__footer-parallax-coin-item.main__footer-parallax-coin-item--2
+                img(src="images/decor-1.png" srcset="images/decor-1@2x.png 2x" width="145" height="156")
+              picture(data-depth="-.25").js-parallax-layer.parallax-item.parallax-item--3.main__footer-parallax-coin-item.main__footer-parallax-coin-item--3
+                img(src="images/decor-5.png" srcset="images/decor-5@2x.png 2x" width="182" height="177")
+          .container.container--size-md.main__footer-container
+            section.info-section
+              p.u-suptitle.info-section__suptitle Сомневаетесь?
+              h2.u-title.info-section__title Выберите свой вариант развития событий
+              .row.info-section__list
+                .row__col--6.info-section__list-col
+                  article.info-card.info-card--theme-dark.info-section__list-card
+                    .info-card__inner
+                      h3.info-card__title Покинули страницу
+                      ul.list-info.list-info--theme-gray.info-card__list
+                        li Ваше финансовое положение не изменилось
+                        li Желания так и остаются нереализованными,<br>а рутина неизменной
+                        li Все же решились пройти курс,<br>но его уже нет в свободном доступе
+                      footer.info-card__footer
+                        .info-card__suptitle Результат:
+                        p.info-card__result Финансовые проблемы остаются нерешенными, в жизни так и не случился перелом
+                .row__col--6.info-section__list-col
+                  article.info-card.info-card--theme-blue.info-section__list-card
+                    .info-card__inner
+                      h3.info-card__title Получили бесплатный курс
+                      ul.list-info.list-info--theme-accent.info-card__list
+                        li Получили базовые знания по финансовым рынкам
+                        li Применили эти навыки на практике, начали зарабатывать и&nbsp;уже можете позволить больше, чем раньше
+                        li Покупаете себе квартиру, машину,<br>отправляете семью на отдых, путешествуете
+                      footer.info-card__footer
+                        .info-card__suptitle Результат:
+                        p.info-card__result
+                          span Становитесь финансово независимым и понимаете, что стали счастливым человеком
+            section.appeal-section
+              .title-brand.title-brand--size-xl.appeal-section__title
+                span.title-brand__sup Основы
+                span.title-brand__sub финансового рынка
+              p.u-suptitle.appeal-section__suptitle и начните путь к мечте длиной в полгода
+              form(action="#").appeal-section__form
+                .appeal-section__form-row
+                  .appeal-section__form-row-col
+                    .form-line.appeal-section__form-line
+                      p.u-valid.form-line__valid Введите мин. 2 символа
+                      input(type="text" name="name" autocomplete="nope" required placeholder="Ваше имя").input-el.input-el--theme-blue.input-el--size-lg.input-el--type-name.form-line__input
+                  .appeal-section__form-row-col
+                    .form-line.appeal-section__form-line
+                      p.u-valid.is-error.form-line__valid Некорректный email
+                      input(type="email" name="email" autocomplete="nope" required placeholder="Ваша почта").input-el.input-el--theme-blue.input-el--size-lg.input-el--type-email.form-line__input
+                  .appeal-section__form-row-col
+                    .form-line.appeal-section__form-line
+                      p.u-valid.form-line__valid Некорректный телефон
+                      input(type="tel" name="phone" id="phone" autocomplete="nope" required pattern="\d{8,16}" maxlength="16" value="+7").js-tel-input-country-init.input-el.input-el--theme-blue.input-el--size-lg.form-line__input
+                .appeal-section__form-privacy
+                  label.u-checkbox.u-checkbox--size-lg
+                    input(type="checkbox" name="privacy" checked).u-checkbox__control
+                    .u-checkbox__inner
+                      span.u-checkbox__icon-wrap
+                        svg.icon.u-checkbox__icon
+                          use(xlink:href="images/sprite.svg#checked")
+                      span.u-checkbox__text Дая согласие на обработку своих персональных данных
+                .appeal-section__form-footer
+                  button(type="button").btn.btn--size-lg.btn--theme-accent.appeal-section__form-btn
+                    span.btn__bg
+                    span.btn__inner
+                      span.btn__title Скачать курс
+                  .appeal-section__form-subtitle <span>Бесплатный</span> видеокурс
+
+            include includes/footer.pug
+
+    #modal-code.modal.modal--code
+      .js-modal-close.modal__overlay
+      .modal__inner
+        .modal__center
+          button.js-modal-close.btn-close.modal__center-close
+            svg.icon.btn-close__icon
+              use(xlink:href="images/sprite.svg#close")
+          form(action="#").modal-form
+            p.modal-form__title Введите код<br>для верификации
+            p.modal-form__description мы отправили код через sms на указанный вами номер
+            .js-code-list.code-list.modal-form__code-input
+              input(type="number" autocomplete="nope" required).js-code-input.code-input.code-list__input
+              input(type="number" autocomplete="nope" required).js-code-input.code-input.code-list__input
+              input(type="number" autocomplete="nope" required).js-code-input.code-input.code-list__input
+              input(type="number" autocomplete="nope" required).js-code-input.code-input.code-list__input
+              input(type="hidden" name="pincode").js-code-output
+            .modal-form__action
+              a.modal-form__action-again Запросить код снова
+              a(href="#modal-change").js-modal-init.modal-form__action-change Изменить номер телефона
+            footer.modal-form__footer
+              button(type="submit").btn.btn--size-lg.btn--theme-accent.modal-form__footer-btn
+                span.btn__bg
+                span.btn__inner
+                  span.btn__title Подтвердить
+              .modal-form__footer-subtitle <span>Бесплатный</span> видеокурс
+    #modal-form.modal.modal--form
+      .js-modal-close.modal__overlay
+      .modal__inner
+        .modal__center
+          button.js-modal-close.btn-close.modal__center-close
+            svg.icon.btn-close__icon
+              use(xlink:href="images/sprite.svg#close")
+          form(action="#").modal-form
+            .form-line.modal-form__line
+              p.u-valid.form-line__valid Введите мин. 2 символа
+              input(type="text" name="name" autocomplete="nope" required placeholder="Ваше имя").input-el.input-el--theme-white.input-el--size-md.input-el--type-name.form-line__input
+            .form-line.modal-form__line
+              p.u-valid.is-error.form-line__valid Некорректный email
+              input(type="email" name="email" autocomplete="nope" required placeholder="Ваша почта").input-el.input-el--theme-white.input-el--size-md.input-el--type-email.form-line__input
+            .form-line.modal-form__line
+              p.u-valid.form-line__valid Некорректный телефон
+              input(type="tel" name="phone" id="phone" autocomplete="nope" required pattern="\d{8,16}" maxlength="16" value="+7").js-tel-input-country-modal-init.input-el.input-el--theme-white.input-el--size-md.form-line__input
+            .modal-form__privacy
+              label.u-checkbox.u-checkbox--size-md
+                input(type="checkbox" name="privacy" checked).u-checkbox__control
+                .u-checkbox__inner
+                  span.u-checkbox__icon-wrap
+                    svg.icon.u-checkbox__icon
+                      use(xlink:href="images/sprite.svg#checked")
+                  span.u-checkbox__text Дая согласие на обработку своих персональных данных
+            footer.modal-form__footer
+              button(type="submit").btn.btn--size-lg.btn--theme-accent.modal-form__footer-btn
+                span.btn__bg
+                span.btn__inner
+                  span.btn__title Скачать курс
+              .modal-form__footer-subtitle <span>Бесплатный</span> видеокурс
+    #modal-change.modal.modal--change
+      .js-modal-close.modal__overlay
+      .modal__inner
+        .modal__center
+          button.js-modal-close.btn-close.modal__center-close
+            svg.icon.btn-close__icon
+              use(xlink:href="images/sprite.svg#close")
+          form(action="#").modal-form
+            p.modal-form__title Введите правильный номер телефона
+            .form-line.modal-form__line
+              p.u-valid.form-line__valid Некорректный телефон
+              input(type="tel" name="phone" id="phone" autocomplete="nope" required pattern="\d{8,16}" maxlength="16" value="+7").js-tel-input-country-modal-change-init.input-el.input-el--theme-white.input-el--size-md.form-line__input
+            .modal-form__privacy
+              label.u-checkbox.u-checkbox--size-md
+                input(type="checkbox" name="privacy" checked).u-checkbox__control
+                .u-checkbox__inner
+                  span.u-checkbox__icon-wrap
+                    svg.icon.u-checkbox__icon
+                      use(xlink:href="images/sprite.svg#checked")
+                  span.u-checkbox__text Дая согласие на обработку своих персональных данных
+            footer.modal-form__footer
+              button(type="submit").btn.btn--size-lg.btn--theme-accent.modal-form__footer-btn
+                span.btn__bg
+                span.btn__inner
+                  span.btn__title Отправить
+              .modal-form__footer-subtitle <span>Бесплатный</span> видеокурс
+    #modal-privacy.modal.modal--privacy
+      .js-modal-close.modal__overlay
+      .modal__inner
+        .modal__center
+          button.js-modal-close.btn-close.modal__center-close
+            svg.icon.btn-close__icon
+              use(xlink:href="images/sprite.svg#close")
+          .modal-privacy
+            .content.modal-privacy__content
+              h3 Правила использования сайта
+              p Настоящий Интернет-ресурс является официальным Интернет-сайтом (далее - Сайт), расположенным по адресу <span class="color-accent">best-take.space</span>. Под Пользователем в настоящих Правилах понимается любое лицо, осуществляющее доступ к Сайту. Вне зависимости от того, являетесь Вы зарегистрированным или незарегистрированным пользователем, вы обязуетесь выполнять данные Правила в полном объёме, а также руководствоваться в своих действиях нормами действующего законодательства РФ.
+              p Настоящие Правила использования информации регламентируют доступ к сайту и использование данного сайта, включая просмотр, загрузку, воспроизведение, отображение, опубликование (данные, графики, иллюстрации, фотографии, дизайн, описания, информация, а также видео-, аудиофрагменты, музыкальные и звуковые фрагменты),а так же содержание любого электронного письма или схожей информации, направленной в отношении данного сайта и/или регистрация или подписка пользователя и другое содержание данного сайта. Данное положение касается любого вида пользования, включая использование посредством электронных, механических, фотокопировальных, записывающих средств и т. д.
+              p Правообладателями в отношении Информации, размещенной на Сайте, являются в соответствующих случаях Администрация сайта, Пользователи и/или третьи лица. Администрация сайта является законным правообладателем и ей принадлежат все исключительные имущественные и иные соответствующие права на Сайт, в том числе, но, не ограничиваясь перечисленным, на программное обеспечение Сайта, графику, дизайн, Базу данных Сайта. Любая Информация, размещаемая на Сайте Пользователем, соответственно, принадлежит такому Пользователю или соответствующему третьему лицу. Размещая Информацию на Сайте, Пользователь подтверждает, что он обладает всеми необходимыми для этого правами и полномочиями, также Пользователь соглашается с тем, что такая Информация становится доступной для Пользователей Сайта.
+              p Размещая Информацию на Сайте, Пользователь автоматически безвозмездно, безусловно и безотзывно предоставляет Администрации Сайта неисключительное право на использование такой Информации по усмотрению Администрации Сайта в том числе, но не ограничиваясь, на воспроизведение, копирование, подбор, систематизацию, преобразование, изменение, редактирование, перевод, опубликование, распространение такой Информации (частично или полностью) любыми законными способами.
+              p Если не указано иное, содержание Сайта, иные объекты интеллектуальной собственности, опубликованные на Сайте, могут воспроизводиться или распространяться в неизмененной форме исключительно для некоммерческого использования. Для этих целей Пользователю предоставляется ограниченное, не подлежащее передаче, неисключительное и отзывное разрешение на доступ и право личного пользования (не для извлечения прибыли) данным сайтом и содержанием сайта в качестве информационного ресурса. Пользователь может с помощью электронных средств копировать и сделать твёрдую копию содержания данного сайта для этих целей, при условии соблюдения всех авторских прав и прав собственности (когда они существуют) в отношении содержания данного сайта.
+              p Упоминания об авторских и других интеллектуальных правах должны сохраняться во всех случаях воспроизведения. Каждое воспроизведение должно сопровождаться ссылкой (а в случае Интернет — активной гиперссылкой) на Сайт, как на источник Информации. Текст ссылки (гиперссылки) должен быть хорошо читаем и содержать источник информации, наименование правообладателя, дату (если имеется). При размещении гиперссылки на данный сайт запрещается изменять стандартный вид окна программы просмотра (браузера) или иным способом ограничивать либо изменять отображение содержания данного сайта; указывать недостоверную информацию, связанную с гиперссылкой на данный сайт; размещать на интернет-страницах, содержащих гиперссылки на данный сайт, информационные или иные материалы, не соответствующие целям и принципам функционирования данного сайта. За исключением вышеуказанного, все остальные действия будут истолкованы как нарушение авторских прав.
+              p Любое другое использование содержания сайта, включая воспроизведение в целях, отличных от перечисленных выше, модификацию, распространение, передачу, загрузку информации на сайте, переиздание или воссоздание (без предварительного письменного согласия правообладателя) запрещается, за исключением тех случаев, когда данный запрет не противоречит действующему законодательству и договорным отношениям с правообладателем.
+              p Пользователь не должен использовать данный сайт или услуги таким способом, при котором нарушаются данные условия (или их общая направленность) или любое действующее законодательство и положения (включая законы и положения, касающиеся использования общественных коммуникационных сетей) или в результате чего будет причинён или возможно нанесение ущерба, создание препятствий или нарушение работы сайта или оказание предоставляемых услуг. Пользователь не имеет право предпринимать попытки к получению несанкционированного доступа к любому из разделов данного сайта или собирать или предпринимать попытки к сбору личных сведений, имеющих отношение к другим пользователям данного сайта.
+              p Любое несанкционированное использование или копирование информации сайта, или использование информации Сайта, противоречащее данным условиям (или их общей направленности), может привести к нарушению прав собственности на товарные знаки, авторские права или другие права собственности, и повлечь за собой административную и уголовную ответственность. Пользователь не имеет право использовать любую информацию сайта (или любую другую информацию, доступ к которой открывается с данного сайта) таким образом, в результате которого будут нарушены права на обладание товарными знаками, авторскими правами и другими правами собственности.
+              p По мере необходимости мы можем изменить Правила использования информации путем размещения обновленной версии на сайте. Мы призываем Вас чаще посещать наши ресурсы, чтобы быть в курсе изменений.
+              p Если у Вас возникли вопросы, комментарии или замечания правил использования информации, Вы можете связаться с нами по указанным на сайте контактам. Мы будем рады оперативно решить все вопросы.
+
+    include includes/foot.pug

@@ -1,0 +1,52 @@
+.header {
+    width: 100%;
+    padding: 54px 0 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    &__container {
+    }
+    &__author {
+        display: flex;
+        align-items: center;
+        &-link {
+            font-weight: bold;
+            font-size: 29.59px;
+            line-height: 1.18;
+            text-transform: uppercase;
+            transition: all .4s;
+            &:hover {
+                text-decoration: none;
+                @media (min-width: $md-mf) {
+                    color: $color-accent-5;
+                }
+            }
+            &-name,
+            &-surname {
+                display: block;
+            }
+            &-name {
+                color: $color-accent-5;
+            }
+            &-surname {
+            }
+        }
+        &-description {
+            max-width: 240px;
+            margin: 0 0 0 27px;
+            font-size: 14px;
+            line-height: 1.26;
+            position: relative;
+            &:before {
+                background: $gradient-gray-mirror;
+                width: 1px;
+                content: '';
+                position: absolute;
+                top: -17px;
+                bottom: -17px;
+                left: -14px;
+            }
+        }
+    }
+}

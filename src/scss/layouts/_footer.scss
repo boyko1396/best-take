@@ -1,0 +1,32 @@
+.footer {
+    padding: 44px 0 56px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.18;
+    color: $color-gray-1;
+    border-top: 1px solid $color-blue-2;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    a {
+        transition: all .4s;
+        &:hover {
+            text-decoration: none;
+            @media (min-width: $md-mf) {
+                color: $color-accent-1;
+            }
+        }
+    }
+    &__contacts {
+    }
+    &__info {
+        text-align: right;
+    }
+    &__line {
+        margin: 0 0 8px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
