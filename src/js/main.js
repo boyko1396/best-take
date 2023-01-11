@@ -78,4 +78,13 @@ $(document).ready(function() {
         });
         $wrap.find('.js-code-output').val(fullVal);
     });
+
+    // marquee intro
+    $('.marquee').marquee({
+        duration: 15000,
+        gap: 0,
+        delayBeforeStart: 0,
+        direction: 'left',
+        duplicated: true
+    });
 });

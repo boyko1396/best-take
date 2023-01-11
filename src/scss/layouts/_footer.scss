@@ -5,9 +5,16 @@
     line-height: 1.18;
     color: $color-gray-1;
     border-top: 1px solid $color-blue-2;
+    @media (max-width: $md) {
+        padding: 40px 0 80px;
+        border-top: none;
+    }
     &__container {
         display: flex;
         justify-content: space-between;
+        @media (max-width: $md) {
+            flex-wrap: wrap;
+        }
     }
     a {
         transition: all .4s;
@@ -19,9 +26,20 @@
         }
     }
     &__contacts {
+        @media (max-width: $md) {
+            max-width: 100%;
+            margin-bottom: 34px;
+            flex-basis: 100%;
+            text-align: center;
+        }
     }
     &__info {
         text-align: right;
+        @media (max-width: $md) {
+            max-width: 100%;
+            flex-basis: 100%;
+            text-align: center;
+        }
     }
     &__line {
         margin: 0 0 8px;

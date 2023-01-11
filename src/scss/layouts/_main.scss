@@ -6,6 +6,9 @@
         position: relative;
         z-index: 0;
         &-parallax {
+            @media (max-width: $lg) {
+                display: none !important;
+            }
             &-coin {
                 &-item {
                     &--1 {
@@ -29,6 +32,22 @@
         &-container {
         }
     }
+    &__benefits {
+        background: #0E1115;
+        padding: 40px var(--gap-fluid);
+        &-list {
+            margin-top: -24px;
+            margin-right: -10px;
+            margin-left: -10px;
+            &-col {
+                max-width: 50%;
+                margin: 24px 0 0;
+                padding-right: 10px;
+                padding-left: 10px;
+                flex: 0 0 50%;
+            }
+        }
+    }
 }
 
 .intro {
@@ -37,6 +56,18 @@
     position: relative;
     z-index: 0;
     &__parallax {
+        @media (max-width: $lg) {
+            display: none !important;
+        }
+    }
+    &__marquee {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @media (max-width: $lg) {
+            display: none !important;
+        }
     }
     &__coin {
         &-item {
@@ -82,6 +113,22 @@
         pointer-events: none;
         z-index: -1;
         @extend .img-cover;
+        img {
+            @media (max-width: $lg) {
+                width: 80%;
+                height: auto;
+                top: initial;
+                right: -13vw;
+                bottom: -10vw;
+                left: auto;
+                object-fit: initial;
+            }
+            @media (max-width: $sm) {
+                width: 130%;
+                right: -30%;
+                bottom: -24%;
+            }
+        }
     }
     &__container {
         min-height: 100vh;
@@ -92,12 +139,26 @@
         justify-content: center;
         position: relative;
         z-index: 1;
+        @media (max-width: $lg) {
+            padding-top: 184px;
+            padding-bottom: 74px;
+        }
+        @media (max-width: $sm) {
+            padding-bottom: 40px;
+        }
+        @media (max-width: $xs) {
+            padding-top: 140px;
+            padding-bottom: 102%;
+        }
     }
     &__content {
         max-width: 760px;
     }
     &__title {
         margin: 0 0 15px;
+        @media (max-width: $xs) {
+            margin-bottom: 10px;
+        }
     }
     &__description {
         max-width: 410px;
@@ -105,14 +166,39 @@
         font-weight: 300;
         font-size: var(--fs-4);
         color: $color-gray-1;
+        @media (max-width: $lg) {
+            margin-bottom: 34px;
+        }
+        @media (max-width: $xs) {
+            margin-bottom: 26px;
+            font-size: 17px;
+        }
     }
     &__btn-wrap {
         margin: 0 0 80px;
         display: inline-block;
+        @media (max-width: $lg) {
+            margin-bottom: 80px;
+            padding-bottom: 10vw;
+        }
+        @media (max-width: $sm) {
+            padding-bottom: 36vw;
+        }
+        @media (max-width: $xs) {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
     }
     &__btn {
         min-width: 360px;
         margin: 0 0 15px;
+        @media (max-width: $lg) {
+            min-width: 276px;
+            margin-bottom: 12px;
+        }
+        @media (max-width: $xs) {
+            min-width: 0;
+        }
     }
     &__btn-description {
         margin: 0;
@@ -120,6 +206,12 @@
         font-size: var(--fs-5);
         text-align: center;
         text-transform: uppercase;
+        @media (max-width: $lg) {
+            font-size: 15px;
+        }
+        @media (max-width: $xs) {
+            font-size: 11px;
+        }
         span {
             color: $color-accent-6;
         }
@@ -127,8 +219,20 @@
     &__benefits {
         &-list {
             margin-top: -24px;
+            @media (max-width: $xs) {
+                margin-right: -10px;
+                margin-left: -10px;
+            }
             &-col {
                 margin-top: 24px;
+                @media (max-width: $lg) {
+                    max-width: 50%;
+                    flex-basis: 50%;
+                }
+                @media (max-width: $xs) {
+                    padding-right: 10px;
+                    padding-left: 10px;
+                }
             }
             &-card {
                 height: 100%;
@@ -139,6 +243,12 @@
 
 .step-section {
     padding: 88px 0 34px;
+    @media (max-width: $lg) {
+        padding: 60px 0 30px;
+    }
+    @media (max-width: $xs) {
+        padding-top: 35px;
+    }
     &__container {
     }
     &__header {
@@ -150,18 +260,48 @@
         margin: 0 0 10px;
         font-weight: 300;
         color: $color-gray-6;
+        @media (max-width: $lg) {
+            margin-bottom: 25px;
+        }
+        @media (max-width: $sm) {
+            margin-bottom: 20px;
+        }
     }
     &__title {
         margin: 0 0 20px;
+        @media (max-width: $lg) {
+            margin-bottom: 25px;
+        }
+        @media (max-width: $sm) {
+            margin-bottom: 20px;
+        }
     }
     &__subtitle {
         margin: 0 0 42px;
         color: $color-accent-1;
+        @media (max-width: $lg) {
+            margin-bottom: 45px;
+        }
+        @media (max-width: $sm) {
+            margin-bottom: 35px;
+        }
     }
     &__list {
         margin-bottom: -40px;
+        @media (max-width: $sm) {
+            margin-bottom: -20px;
+        }
         &-col {
             margin-bottom: 40px;
+            @media (max-width: $lg) {
+                max-width: 50%;
+                flex-basis: 50%;
+            }
+            @media (max-width: $sm) {
+                max-width: 100%;
+                margin-bottom: 20px;
+                flex-basis: 100%;
+            }
         }
         &-card {
             height: 100%;
@@ -171,12 +311,21 @@
 
 .meta-section {
     padding: 34px 0;
+    @media (max-width: $sm) {
+        padding: 30px 0;
+    }
     &__container {
     }
     &__block {
         padding: 69px 0;
         position: relative;
         z-index: 0;
+        @media (max-width: $lg) {
+            padding: 50px 25px 60px;
+        }
+        @media (max-width: $sm) {
+            padding: 40px 15px 50px;
+        }
         &:before {
             background: url(../images/meta-block-bg.jpg) 50% no-repeat;
             background-size: cover;
@@ -189,9 +338,20 @@
             border-radius: 30px;
             pointer-events: none;
             z-index: -1;
+            @media (max-width: $xl) {
+                right: -20px;
+                left: -20px;
+            }
+            @media (max-width: $lg) {
+                right: 0;
+                left: 0;
+            }
         }
         &-title {
             margin: 0 0 40px;
+            @media (max-width: $lg) {
+                font-size: 37px;
+            }
         }
         &-list-wrap {
             margin-bottom: -28px;
@@ -204,6 +364,10 @@
             li {
                 max-width: 310px;
                 flex-grow: 1;
+                @media (max-width: $sm) {
+                    max-width: 100%;
+                    flex: 0 0 100%;
+                }
             }
         }
     }
@@ -212,7 +376,13 @@
 .author-section {
     padding: 24px 0 118px;
     position: relative;
+    @media (max-width: $lg) {
+        padding: 30px 0 60px;
+    }
     &__parallax {
+        @media (max-width: $lg) {
+            display: none !important;
+        }
     }
     &__coin {
         &-item {
@@ -243,21 +413,48 @@
     }
     &__col {
         &--content {
+            @media (max-width: $lg) {
+                max-width: 600px;
+                margin-right: auto;
+                margin-left: auto;
+                flex-basis: 100%;
+            }
         }
         &--picture {
+            @media (max-width: $lg) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
         }
     }
     &__subtitle {
         margin: 24px 0 0;
         color: $color-accent-1;
+        @media (max-width: $lg) {
+            margin-top: 0;
+            font-size: 32px;
+        }
+        @media (max-width: $sm) {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
     }
     &__title {
         margin: 0 0 24px;
+        @media (max-width: $lg) {
+            font-size: 52px;
+        }
+        @media (max-width: $sm) {
+            font-size: 40px;
+        }
     }
     &__text {
         margin: 0 0 42px;
         line-height: 1;
         color: $color-gray-4;
+        @media (max-width: $xs) {
+            margin-bottom: 30px;
+        }
     }
     &__profit {
         margin: 0 0 42px;
@@ -289,12 +486,25 @@
     &__footer {
         display: flex;
         align-items: center;
+        @media (max-width: $xs) {
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
         &-btn {
             margin-right: 30px;
             flex-shrink: 0;
             font-size: 14px;
+            @media (max-width: $xs) {
+                margin: 20px 0 0;
+            }
         }
         &-content {
+            @media (max-width: $xs) {
+                max-width: 100%;
+                flex: 0 0 100%;
+                order: -1;
+            }
             &-brand {
                 margin: 0 0 2px;
             }
@@ -308,6 +518,13 @@
         }
     }
     &__picture {
+        @media (max-width: $lg) {
+            max-width: 560px;
+            margin: 44px auto 0;
+        }
+        @media (max-width: $xs) {
+            margin: 0 0 40px;
+        }
         img {
             width: 100%;
             height: auto;
@@ -319,21 +536,42 @@
 .reviews-section {
     background: $color-black-4;
     padding: 80px 0 100px;
+    @media (max-width: $lg) {
+        background: #0A131B;
+        padding: 60px 0 80px;
+    }
     &__container {
     }
     &__title {
         margin: 0 0 10px;
         text-align: center;
+        @media (max-width: $lg) {
+            font-size: 37px;
+        }
+        @media (max-width: $sm) {
+            font-size: 37px;
+        }
     }
     &__suptitle {
         margin: 0 0 60px;
         color: $color-accent-1;
         text-align: center;
+        @media (max-width: $lg) {
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+        @media (max-width: $sm) {
+            font-size: 20px;
+        }
     }
     &__list {
-        margin-bottom: -40px;
+        margin-bottom: -30px;
         &-col {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+            @media (max-width: $lg) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
         }
         &-card {
             height: 100%;
@@ -343,17 +581,47 @@
 
 .info-section {
     padding: 100px 0 50px;
+    @media (max-width: $lg) {
+        padding: 100px 0 20px;
+    }
+    @media (max-width: $sm) {
+        padding-top: 70px;
+    }
     &__suptitle {
         margin: 0 0 10px;
         color: $color-accent-1;
+        @media (max-width: $lg) {
+            font-size: 24px;
+            text-align: center;
+        }
+        @media (max-width: $sm) {
+            font-size: 16px;
+        }
     }
     &__title {
         margin: 0 0 50px;
+        @media (max-width: $lg) {
+            font-size: 24px;
+            text-align: center;
+        }
+        @media (max-width: $sm) {
+            margin-bottom: 30px;
+        }
     }
     &__list {
         margin-bottom: -50px;
+        @media (max-width: $sm) {
+            margin-bottom: -20px;
+        }
         &-col {
             margin-bottom: 50px;
+            @media (max-width: $lg) {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+            @media (max-width: $sm) {
+                margin-bottom: 20px;
+            }
         }
         &-card {
             height: 100%;
@@ -363,27 +631,47 @@
 
 .appeal-section {
     padding: 50px 0 56px;
+    @media (max-width: $lg) {
+        padding-top: 8px;
+        padding-bottom: 40px;
+    }
     &__title {
         margin: 0 0 12px;
         text-align: center;
+        @media (max-width: $sm) {
+            margin-bottom: 8px;
+        }
     }
     &__suptitle {
         margin: 0 0 42px;
         font-weight: 300;
         color: $color-gray-1;
         text-align: center;
+        @media (max-width: $sm) {
+            font-size: 20px;
+        }
     }
     &__form {
         max-width: 960px;
         margin: 0 auto;
+        @media (max-width: $md) {
+            max-width: 400px;
+        }
         &-row {
             margin: 0 -15px;
             display: flex;
+            @media (max-width: $md) {
+                flex-wrap: wrap;
+            }
             &-col {
                 max-width: 33.33%;
                 margin: 0 0 30px;
                 padding: 0 15px;
                 flex: 0 0 33.33%;
+                @media (max-width: $md) {
+                    max-width: 100%;
+                    flex-basis: 100%;
+                }
             }
         }
         &-line {
@@ -408,4 +696,214 @@
             }
         }
     }
+}
+
+.thanks-intro {
+    background: url(../images/thanks-section-bg.jpg) 50% no-repeat;
+    background-size: cover;
+    padding: 110px 0;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    @media (max-width: $lg) {
+        padding: 40px 0 80px;
+    }
+    @media (max-width: $sm) {
+        text-align: left;
+    }
+    @media (max-width: $xs) {
+        padding: 34px 0 60px;
+    }
+    &__marquee {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @media (max-width: $lg) {
+            display: none !important;
+        }
+    }
+    &__parallax {
+        @media (max-width: $lg) {
+            display: none !important;
+        }
+        &-coin {
+        }
+        &-item {
+            &--1 {
+                top: -10% !important;
+                left: 8% !important;
+                z-index: -1;
+            }
+            &--2 {
+                top: 35% !important;
+                left: 2% !important;
+                z-index: -3;
+            }
+            &--3 {
+                top: 66% !important;
+                left: 3% !important;
+                z-index: -1;
+            }
+        }
+    }
+    &__container {
+    }
+    &__suptitle {
+        margin: 0 0 16px;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 1.1;
+        text-transform: uppercase;
+        @media (max-width: $sm) {
+            font-size: 18px;
+        }
+    }
+    &__text {
+        max-width: 550px;
+        margin: 0 auto 36px;
+        font-size: 20px;
+        line-height: 1.2;
+        @media (max-width: $sm) {
+            max-width: 440px;
+            margin: 0 0 18px;
+            font-size: 14px;
+        }
+    }
+    &__title {
+        margin: 0;
+        font-weight: bold;
+        font-size: 59px;
+        line-height: 1;
+        color: $color-gray-1;
+        @media (max-width: $sm) {
+            max-width: 350px;
+            font-weight: 500;
+            font-size: 38px;
+        }
+    }
+}
+
+.thanks-section {
+    padding: 64px 0;
+    line-height: 1.18;
+    @media (max-width: $sm) {
+        padding: 48px 0;
+    }
+    &--theme {
+        &-dark {
+            background: #0A131B;
+        }
+        &-blue {
+            background: $color-black-6;
+        }
+        &-simple {
+            background: transparent;
+        }
+    }
+    &__container {
+    }
+    &__header {
+        max-width: 680px;
+        margin: 0 auto 72px;
+        text-align: center;
+        @media (max-width: $sm) {
+            margin-bottom: 50px;
+        }
+        & > :last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__title {
+        margin: 0 0 30px;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 1.18;
+        @media (max-width: $sm) {
+            margin-bottom: 22px;
+            font-size: 24px;
+        }
+    }
+    &__text {
+        max-width: 900px;
+        margin: 0 auto 48px;
+        &--size-md {
+            max-width: 810px;
+        }
+        @media (max-width: $sm) {
+            font-size: 14px;
+        }
+    }
+    &__body {
+        text-align: center;
+        & > :last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__step-title {
+        background: $color-accent-2;
+        padding: 6px 18px;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1.18;
+        color: $color-white-1;
+        text-transform: uppercase;
+        border-radius: 5px;
+        vertical-align: top;
+    }
+    &__gallery-wrap {
+        justify-content: center;
+        &-col {
+            &--12 {
+            }
+            &--8 {
+                @media (max-width: $sm) {
+                    max-width: 100%;
+                    flex-basis: 100%;
+                }
+            }
+        }
+    }
+    &__gallery {
+        margin-top: 48px;
+        margin-bottom: -40px;
+        justify-content: center;
+        @media (max-width: $xs) {
+            margin-bottom: -20px;
+        }
+        &-col {
+            margin-bottom: 40px;
+            @media (max-width: $sm) {
+                max-width: 50%;
+                flex-basis: 50%;
+            }
+            @media (max-width: $xs) {
+                max-width: 100%;
+                margin-bottom: 20px;
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
+.js-marquee {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.marquee {
+    background: $color-blue-3;
+    height: 62px;
+}
+
+.marquee-item {
+    padding: 0 17px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1;
+    color: rgba($color-white-1, .75);
+    text-transform: uppercase;
+    border-right: 1px solid $color-accent-1;
 }

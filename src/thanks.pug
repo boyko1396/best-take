@@ -5,69 +5,21 @@ html(lang='ru')
   body
 
     #root
-      include includes/header.pug
-
       main(role="main").main
-        section.intro
-          #js-intro-parallax.parallax-scene.intro__parallax
-            .intro__coin
-              picture(data-depth="-.1").js-parallax-layer.parallax-item.parallax-item--1.intro__coin-item.intro__coin-item--1
-                img(src="images/decor-4.png" srcset="images/decor-4@2x.png 2x" width="162" height="167")
-              picture(data-depth=".5").js-parallax-layer.parallax-item.parallax-item--2.intro__coin-item.intro__coin-item--2
-                img(src="images/decor-1.png" srcset="images/decor-1@2x.png 2x" width="145" height="156")
-              picture(data-depth=".2").js-parallax-layer.parallax-item.parallax-item--3.intro__coin-item.intro__coin-item--3
-                img(src="images/decor-5.png" srcset="images/decor-5@2x.png 2x" width="182" height="177")
-              picture(data-depth="-.4").js-parallax-layer.parallax-item.parallax-item--4.intro__coin-item.intro__coin-item--4
+        section.thanks-intro
+          #js-intro-parallax.parallax-scene.thanks-intro__parallax
+            .thanks-intro__parallax-coin
+              picture(data-depth="-.4").js-parallax-layer.parallax-item.parallax-item--4.thanks-intro__parallax-item.thanks-intro__parallax-item--1
                 img(src="images/decor-2.png" srcset="images/decor-2@2x.png 2x" width="145" height="148")
-              picture(data-depth=".2").js-parallax-layer.parallax-item.parallax-item--1.intro__coin-item.intro__coin-item--5
+              picture(data-depth=".2").js-parallax-layer.parallax-item.parallax-item--1.thanks-intro__parallax-item.thanks-intro__parallax-item--2
                 img(src="images/decor-4.png" srcset="images/decor-4@2x.png 2x" width="162" height="167")
-              picture(data-depth=".6").js-parallax-layer.parallax-item.parallax-item--5.intro__coin-item.intro__coin-item--6
+              picture(data-depth=".6").js-parallax-layer.parallax-item.parallax-item--5.thanks-intro__parallax-item.thanks-intro__parallax-item--3
                 img(src="images/decor-3.png" srcset="images/decor-3@2x.png 2x" width="167" height="180")
-          picture.intro__hero
-            source(media="(max-width: 1199px)" srcset="images/intro-hero-mobile.png")
-            source(media="(min-width: 1200px)" srcset="images/intro-hero.png")
-            img(src="images/intro-hero.png" alt="Основы финансового рынка")
-          .container.container--size-md.intro__container
-            .intro__content
-              h1.title-brand.title-brand--size-xl.intro__title
-                span.title-brand__sup Основы
-                span.title-brand__sub финансового рынка
-              .content.intro__description
-                p Как стать грамотным инвестором с&nbsp;нуля&nbsp;за полгода в любом возрасте?
-              .intro__btn-wrap
-                a(href="#modal-form").js-modal-init.btn.btn--size-xl.btn--theme-accent.intro__btn
-                  span.btn__bg
-                  span.btn__inner
-                    span.btn__title Получить курс
-                .intro__btn-description
-                  span.color-accent Бесплатно
-            .intro__benefits.d-xs-none
-              .row.intro__benefits-list
-                .row__col--3.intro__benefits-list-col
-                  article.benefits-card.intro__benefits-list-card
-                    .benefits-card__inner
-                      picture.benefits-card__img
-                        img(src="images/benefits-card-1.svg" alt="Устойчивая дополнительная финансовая прибавка")
-                      .benefits-card__text Устойчивая дополнительная финансовая прибавка
-                .row__col--3.intro__benefits-list-col
-                  article.benefits-card.intro__benefits-list-card
-                    .benefits-card__inner
-                      picture.benefits-card__img
-                        img(src="images/benefits-card-2.svg" alt="Материальная стабильность")
-                      .benefits-card__text Материальная стабильность
-                .row__col--3.intro__benefits-list-col
-                  article.benefits-card.intro__benefits-list-card
-                    .benefits-card__inner
-                      picture.benefits-card__img
-                        img(src="images/benefits-card-3.svg" alt="Собственные квартира, машина и дача")
-                      .benefits-card__text Собственные квартира, машина и дача
-                .row__col--3.intro__benefits-list-col
-                  article.benefits-card.intro__benefits-list-card
-                    .benefits-card__inner
-                      picture.benefits-card__img
-                        img(src="images/benefits-card-4.svg" alt="Опора для семьи и близких")
-                      .benefits-card__text Опора для семьи и близких
-          <div class='marquee intro__marquee' data-duration='5000' data-duplicated='true'>
+          .container.container--size-md.thanks-intro__container
+            p.thanks-intro__suptitle Спасибо за интерес к нашему видеокурсу!
+            p.thanks-intro__text Мы прислали ссылку на ваш e-mail, по которой вы сможете переходить на данный раздел с видео-уроками.
+            h1.thanks-intro__title Smartmoney видео-курс из&nbsp;14&nbsp;уроков
+          <div class='marquee thanks-intro__marquee' data-duration='5000' data-duplicated='true'>
             .marquee-item Основы финансового рынка
             .marquee-item Основы финансового рынка
             .marquee-item Основы финансового рынка
@@ -77,198 +29,85 @@ html(lang='ru')
             .marquee-item Основы финансового рынка
             .marquee-item Основы финансового рынка
           </div>
-        .main__benefits.d-xs-block
-          .row.main__benefits-list
-            .row__col--3.main__benefits-list-col
-              article.benefits-card.intro__benefits-list-card
-                .benefits-card__inner
-                  picture.benefits-card__img
-                    img(src="images/benefits-card-1.svg" alt="Устойчивая дополнительная финансовая прибавка")
-                  .benefits-card__text Устойчивая дополнительная финансовая прибавка
-            .row__col--3.main__benefits-list-col
-              article.benefits-card.intro__benefits-list-card
-                .benefits-card__inner
-                  picture.benefits-card__img
-                    img(src="images/benefits-card-2.svg" alt="Материальная стабильность")
-                  .benefits-card__text Материальная стабильность
-            .row__col--3.main__benefits-list-col
-              article.benefits-card.intro__benefits-list-card
-                .benefits-card__inner
-                  picture.benefits-card__img
-                    img(src="images/benefits-card-3.svg" alt="Собственные квартира, машина и дача")
-                  .benefits-card__text Собственные квартира, машина и дача
-            .row__col--3.main__benefits-list-col
-              article.benefits-card.intro__benefits-list-card
-                .benefits-card__inner
-                  picture.benefits-card__img
-                    img(src="images/benefits-card-4.svg" alt="Опора для семьи и близких")
-                  .benefits-card__text Опора для семьи и близких
-        section.step-section
-          .container.container--size-md.step-section__container
-            header.step-section__header
-              p.u-suptitle.step-section__suptitle Идеально подходит для начинающих и состоявшихся трейдеров
-              h2.u-title.step-section__title Хотите стать трейдером в&nbsp;4&nbsp;понятных этапа?
-              p.u-subtitle.step-section__subtitle Самое время действовать – сейчас
-            .row.step-section__list
-              .row__col--3.step-section__list-col
-                article.step-card.step-card--theme-simple.step-section__list-card
-                  .step-card__inner
-                    picture.step-card__picture
-                      img(src="images/step-card-1.svg" alt="Курс доступен бесплатно")
-                    .step-card__content
-                      h3.step-card__title Сегодня
-                      p.step-card__text Курс доступен бесплатно
-              .row__col--3.step-section__list-col
-                article.step-card.step-card--theme-simple.step-section__list-card
-                  .step-card__inner
-                    picture.step-card__picture
-                      img(src="images/step-card-2.svg" alt="Пройдите курс и обязательно выполните задания")
-                    .step-card__content
-                      h3.step-card__title Через неделю
-                      p.step-card__text Пройдите курс и обязательно выполните задания
-              .row__col--3.step-section__list-col
-                article.step-card.step-card--theme-simple.step-section__list-card
-                  .step-card__inner
-                    picture.step-card__picture
-                      img(src="images/step-card-3.svg" alt="Знания получены, начинаем активную работу")
-                    .step-card__content
-                      h3.step-card__title Через 2 недели
-                      p.step-card__text Знания получены, начинаем активную работу
-              .row__col--3.step-section__list-col
-                article.step-card.step-card--theme-accent.step-section__list-card
-                  .step-card__inner
-                    .step-card__header
-                      .step-card__content
-                        h3.step-card__title Через месяц
-                        p.step-card__text Получаете заработок, покупаете то, о&nbsp;чем давно мечтали
-                    .step-card__footer
-                      a(href="#modal-form").js-modal-init.btn.btn--size-md.btn--theme-accent.step-card__footer-btn
-                        span.btn__bg
-                        span.btn__inner
-                          span.btn__title Получить курс
-        section.meta-section
-          .container.container--size-md.meta-section__container
-            .meta-section__block
-              h2.u-title.meta-section__block-title Это ваш курс,&nbsp;если:
-              .meta-section__block-list-wrap
-                ul.list-done.meta-section__block-list
-                  li Вы готовы получать дополнительный доход
-                  li Вы заинтересованы в финансовой независимости
-                  li Вы готовы обучаться и материализовывать полученные знания
-                  li Вы готовы заработать свой миллион
-                  li.list-done__line--clear
-                    a(href="#modal-form").js-modal-init.btn.btn--size-sm.btn--theme-accent
-                      span.btn__bg
-                      span.btn__inner
-                        span.btn__title Получить курс
-        section.author-section
-          #js-author-parallax.parallax-scene.author-section__parallax
-            .author-section__coin
-              picture(data-depth="-.4").js-parallax-layer.parallax-item.parallax-item--4.author-section__coin-item.author-section__coin-item--1
-                img(src="images/decor-2.png" srcset="images/decor-2@2x.png 2x" width="145" height="148")
-              picture(data-depth="-.1").js-parallax-layer.parallax-item.parallax-item--1.author-section__coin-item.author-section__coin-item--2
-                img(src="images/decor-4.png" srcset="images/decor-4@2x.png 2x" width="162" height="167")
-              picture(data-depth=".6").js-parallax-layer.parallax-item.parallax-item--5.author-section__coin-item.author-section__coin-item--3
-                img(src="images/decor-3.png" srcset="images/decor-3@2x.png 2x" width="167" height="180")
-          .container.container--size-md.author-section__container
-            .row.author-section__row
-              .row__col--6.author-section__col.author-section__col--content
-                p.u-subtitle.author-section__subtitle Автор курса
-                h2.u-title.author-section__title Владимир Молчанов
-                .content.author-section__text
-                  p Высшее финансовое образование плюс международная бизнес- школа. 34 года
-                  p Основатель курсов, автор статей по финансовым рынкам, эксперт еженедельной программы РБК-ТВ
-                  p Преподаватель ВШЭ, Бизнес- курс Базовые основы биржевой торговли
-                picture.author-section__picture.d-xs-block
-                  img(src="images/author-section-img.png" alt="Автор курса Владимир Молчанов")
-                .author-section__profit
-                  p.author-section__profit-title Средний доход в 2022 году:
-                  p.author-section__profit-subtitle почти <span>400,000 рублей</span> ежемесячно
-                .author-section__footer
-                  a(href="#modal-form").js-modal-init.btn.btn--size-lg.btn--theme-accent.author-section__footer-btn
-                    span.btn__bg
-                    span.btn__inner
-                      span.btn__title Получить курс
-                  .author-section__footer-content
-                    .title-brand.title-brand--size-sm.author-section__footer-content-brand
-                      span.title-brand__sup Основы
-                      span.title-brand__sub финансового рынка
-                    p.author-section__footer-content-text Как стать грамотным инвестором<br>с нуля за полгода в любом возрасте?
-              .row__col--6.author-section__col.author-section__col--picture
-                picture.author-section__picture.d-xs-none
-                  img(src="images/author-section-img.png" alt="Автор курса Владимир Молчанов")
-        section.reviews-section
-          .container.container--size-md.reviews-section__container
-            h2.u-title.reviews-section__title Отзывы
-            p.u-suptitle.reviews-section__suptitle Мнения учеников, которые прошли наш&nbsp;курс
-            .row.reviews-section__list
-              .row__col--4.reviews-section__list-col
-                .reviews-card.reviews-card--theme-simple.reviews-section__list-card
-                  .reviews-card__inner
-                    header.reviews-card__header
-                      picture.reviews-card__picture
-                        img(src="images/reviews-card-1.jpg" alt="Михаил")
-                      .reviews-card__info
-                        .reviews-card__info-name Михаил
-                        .reviews-card__info-age Возраст: 27 лет
-                    p.reviews-card__text Доступно и доходчиво, пригодились знания с института. Насыщенная программа, важным моментом для себя отмечу рассмотрение темы управления торговыми рисками.
-              .row__col--4.reviews-section__list-col
-                .reviews-card.reviews-card--theme-simple.reviews-section__list-card
-                  .reviews-card__inner
-                    header.reviews-card__header
-                      picture.reviews-card__picture
-                        img(src="images/reviews-card-2.jpg" alt="Олег С")
-                      .reviews-card__info
-                        .reviews-card__info-name Олег С
-                        .reviews-card__info-age Возраст: 41 год
-                    p.reviews-card__text Под итог. Три  месяца с момента окончания курса. Торги веду самостоятельно. Для новичка понятный структурированный подход в обучении.
-              .row__col--4.reviews-section__list-col
-                .reviews-card.reviews-card--theme-simple.reviews-section__list-card
-                  .reviews-card__inner
-                    header.reviews-card__header
-                      picture.reviews-card__picture
-                        img(src="images/reviews-card-3.jpg" alt="Ольга")
-                      .reviews-card__info
-                        .reviews-card__info-name Ольга
-                        .reviews-card__info-age Возраст: 47 лет
-                    p.reviews-card__text Свободное время – посвятила его обучению и не пожалела. Уже торгую на московской бирже. Оценить финансовый успех смогу чуть позже, но понимание инструмента инвестиционных решений дает уверенность в торгах.
+        section.thanks-section.thanks-section--theme-blue
+          .container.container--size-md.thanks-section__container
+            .thanks-section__header
+              h2.thanks-section__title Не пропустите наш звонок!
+              .content.thanks-section__text
+                p С вами свяжется менеджер и проведет бесплатную консультацию по основам трейдинга и ответит на вопросы по видеокурсу.
+            .thanks-section__body
+              .thanks-section__step-title 1. Начало
+              h2.thanks-section__title Приступая к работе
+              .content.thanks-section__text
+                p Начните этот курс торговли с изучения основ. Вы узнаете какие существуют виды рынков, их структура и основные участники.
+                p Наши эксперты научат Вас всем ключевым терминам, которые Вам потребуется, расскажут о том, как использовать кредитное плечо для заработка и приумножения средств на депозите.
+            .row.thanks-section__gallery-wrap
+              .row__col--12.thanks-section__gallery-wrap-col--12
+                .row.thanks-section__gallery
+                  .row__col--4.thanks-section__gallery-col
+                    picture.gallery-picture
+                      img(src="images/gallery-img.png")
+                  .row__col--4.thanks-section__gallery-col
+                    picture.gallery-picture
+                      img(src="images/gallery-img.png")
+                  .row__col--4.thanks-section__gallery-col
+                    picture.gallery-picture
+                      img(src="images/gallery-img.png")
+                  .row__col--4.thanks-section__gallery-col
+                    picture.gallery-picture
+                      img(src="images/gallery-img.png")
+                  .row__col--4.thanks-section__gallery-col
+                    picture.gallery-picture
+                      img(src="images/gallery-img.png")
+        section.thanks-section.thanks-section--theme-dark
+          .container.container--size-md.thanks-section__container
+            .thanks-section__body
+              .thanks-section__step-title 2. Основы
+              h2.thanks-section__title Эффективный старт
+              .content.thanks-section__text.thanks-section__text--size-md
+                p В этом разделе вы узнаете, что вам нужно для эффективного старта на финансовых рынках, что на них влияет и за счет каких индикаторов он формируется.
+                p Вам расскажут вам о риск-менеджменте и объяснят на примерах, какая сумма подойдет для старта и как ей правильно оперировать.
+            .row.thanks-section__gallery-wrap
+              .row__col--8.thanks-section__gallery-wrap-col--8
+                .row.thanks-section__gallery
+                  .row__col--6.thanks-section__gallery-col
+                    picture.gallery-picture
+                      img(src="images/gallery-img.png")
+                  .row__col--6.thanks-section__gallery-col
+                    picture.gallery-picture
+                      img(src="images/gallery-img.png")
+                  .row__col--6.thanks-section__gallery-col
+                    picture.gallery-picture
+                      img(src="images/gallery-img.png")
+                  .row__col--6.thanks-section__gallery-col
+                    picture.gallery-picture
+                      img(src="images/gallery-img.png")
         .main__footer
-          #js-main-footer-parallax.parallax-scene.main__footer-parallax
-            .main__footer-parallax-coin
-              picture(data-depth="-.1").js-parallax-layer.parallax-item.parallax-item--1.main__footer-parallax-coin-item.main__footer-parallax-coin-item--1
-                img(src="images/decor-4.png" srcset="images/decor-4@2x.png 2x" width="162" height="167")
-              picture(data-depth=".3").js-parallax-layer.parallax-item.parallax-item--2.main__footer-parallax-coin-item.main__footer-parallax-coin-item--2
-                img(src="images/decor-1.png" srcset="images/decor-1@2x.png 2x" width="145" height="156")
-              picture(data-depth="-.25").js-parallax-layer.parallax-item.parallax-item--3.main__footer-parallax-coin-item.main__footer-parallax-coin-item--3
-                img(src="images/decor-5.png" srcset="images/decor-5@2x.png 2x" width="182" height="177")
           .container.container--size-md.main__footer-container
-            section.info-section
-              p.u-suptitle.info-section__suptitle Остались сомнения?
-              h2.u-title.info-section__title Перед вами два варианта развития событий
-              .row.info-section__list
-                .row__col--6.info-section__list-col
-                  article.info-card.info-card--theme-dark.info-section__list-card
-                    .info-card__inner
-                      h3.info-card__title Не стали скачивать курс
-                      ul.list-info.list-info--theme-gray.info-card__list
-                        li Ваш доход остался на прежнем уровне
-                        li Ваши мечты остались мечтами
-                        li Вы вернулись к курсу – но его уже нет в доступе
-                      footer.info-card__footer
-                        .info-card__suptitle Результат:
-                        p.info-card__result Ваши финансовые вопросы по прежнему в подвешенном состоянии.<br>Ваша зона комфорта давит на вас финансовой несостоятельностью
-                .row__col--6.info-section__list-col
-                  article.info-card.info-card--theme-blue.info-section__list-card
-                    .info-card__inner
-                      h3.info-card__title Прошли бесплатный курс
-                      ul.list-info.list-info--theme-accent.info-card__list
-                        li Вы обладатель новых знаний и навыков по финансовым рынкам
-                        li Вы практик, а значит уже зарабатываете и осуществляете свои мечты
-                        li Вы можете позволить себе больше. Путешествия, квартира мечты и авто, достойное вашего нового статуса
-                      footer.info-card__footer
-                        .info-card__suptitle Результат:
-                        p.info-card__result
-                          span Финансовая независимость сделала вас свободным и успешным человеком
+            section.thanks-section.thanks-section--theme-simple
+              .thanks-section__body
+                .thanks-section__step-title 3. Приступая к торговле
+                h2.thanks-section__title Анализ и стратегия
+                .content.thanks-section__text.thanks-section__text--size-md
+                  p В завершении курса вам расскажут о подводных камнях, которые ждут каждого начинающего трейдера. Эксперты помогут вам разработать торговую стратегии и научат вас ее проверять с помощью торгового журнала.
+              .row.thanks-section__gallery-wrap
+                .row__col--12.thanks-section__gallery-wrap-col--12
+                  .row.thanks-section__gallery
+                    .row__col--4.thanks-section__gallery-col
+                      picture.gallery-picture
+                        img(src="images/gallery-img.png")
+                    .row__col--4.thanks-section__gallery-col
+                      picture.gallery-picture
+                        img(src="images/gallery-img.png")
+                    .row__col--4.thanks-section__gallery-col
+                      picture.gallery-picture
+                        img(src="images/gallery-img.png")
+                    .row__col--4.thanks-section__gallery-col
+                      picture.gallery-picture
+                        img(src="images/gallery-img.png")
+                    .row__col--4.thanks-section__gallery-col
+                      picture.gallery-picture
+                        img(src="images/gallery-img.png")
             section.appeal-section
               .title-brand.title-brand--size-xl.appeal-section__title
                 span.title-brand__sup Основы
@@ -295,7 +134,7 @@ html(lang='ru')
                       span.u-checkbox__icon-wrap
                         svg.icon.u-checkbox__icon
                           use(xlink:href="images/sprite.svg#checked")
-                      span.u-checkbox__text Я подтверждаю свое согласие на персональную обработку данных и соглашаюсь с правилами использования сайта
+                      span.u-checkbox__text Дая согласие на обработку своих персональных данных
                 .appeal-section__form-footer
                   button(type="button").btn.btn--size-lg.btn--theme-accent.appeal-section__form-btn
                     span.btn__bg
@@ -354,7 +193,7 @@ html(lang='ru')
                   span.u-checkbox__icon-wrap
                     svg.icon.u-checkbox__icon
                       use(xlink:href="images/sprite.svg#checked")
-                  span.u-checkbox__text Я подтверждаю свое согласие на персональную обработку данных и соглашаюсь с правилами использования сайта
+                  span.u-checkbox__text Дая согласие на обработку своих персональных данных
             footer.modal-form__footer
               button(type="submit").btn.btn--size-lg.btn--theme-accent.modal-form__footer-btn
                 span.btn__bg
@@ -380,7 +219,7 @@ html(lang='ru')
                   span.u-checkbox__icon-wrap
                     svg.icon.u-checkbox__icon
                       use(xlink:href="images/sprite.svg#checked")
-                  span.u-checkbox__text Я подтверждаю свое согласие на персональную обработку данных и соглашаюсь с правилами использования сайта
+                  span.u-checkbox__text Дая согласие на обработку своих персональных данных
             footer.modal-form__footer
               button(type="submit").btn.btn--size-lg.btn--theme-accent.modal-form__footer-btn
                 span.btn__bg

@@ -13,5 +13,16 @@
     --gap-fluid-: -20px;
 }
 
-@media (max-width: $md) {
+@media (max-width: $lg) {
+    :root {
+        --fs-1: 82px;
+        --fs-2: 37px;
+    }
+}
+
+@media (max-width: $sm) {
+    :root {
+        --fs-1: 56px;
+        --fs-2: 24px;
+    }
 }

@@ -124,11 +124,27 @@ svg,
             min-height: 96px;
             padding: 20px 58px;
             font-size: var(--fs-5);
+            @media (max-width: $lg) {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                min-height: 68px;
+                font-size: 15px;
+            }
+            @media (max-width: $xs) {
+                padding: 10px 48px;
+                min-height: 50px;
+                font-size: 11px;
+            }
         }
         &-lg {
             min-height: 70px;
             padding: 22px 50px;
             font-size: 15px;
+            @media (max-width: $lg) {
+                padding: 12px 44px;
+                min-height: 68px;
+                font-size: 15px;
+            }
         }
         &-md {
             min-height: 64px;
@@ -406,6 +422,9 @@ svg,
     text-transform: uppercase;
     &--size-xl {
         font-size: var(--fs-1);
+        @media (max-width: $xs) {
+            font-size: 13.5vw;
+        }
     }
     &--size-sm {
         font-size: 25.89px;
@@ -435,6 +454,13 @@ svg,
         align-items: center;
         border: 1px solid $color-blue-5;
         border-radius: 10px;
+        @media (max-width: $sm) {
+            padding: 30px 20px;
+        }
+        @media (max-width: $xs) {
+            padding: 25px 10px;
+            flex-wrap: wrap;
+        }
     }
     &__img {
         max-width: 50px;
@@ -442,10 +468,30 @@ svg,
         margin-right: 20px;
         flex: 0 0 50px;
         @extend .img-contain;
+        @media (max-width: $sm) {
+            max-width: 48px;
+            height: 48px;
+            flex-basis: 48px;
+        }
+        @media (max-width: $xs) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
     }
     &__text {
         margin: 0;
         line-height: 1.18;
+        @media (max-width: $sm) {
+            font-size: 17px;
+        }
+        @media (max-width: $xs) {
+            max-width: 100%;
+            flex-basis: 100%;
+            font-size: 16px;
+        }
+        @media (max-width: 380px) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -567,18 +613,18 @@ svg,
         vertical-align: middle;
         position: relative;
         z-index: 0;
-        @media (max-width: $sm) {
-            padding-right: 60px;
-            padding-left: 60px;
-        }
         @media (max-width: $xs) {
-            padding: 35px 15px;
+            padding: 30px 15px;
         }
         &-close {
             margin: 0 0 5px 1px;
             position: absolute;
             bottom: 100%;
             left: 100%;
+            @media (max-width: $lg) {
+                right: 0;
+                left: initial;
+            }
         }
     }
     &--privacy &__center {
@@ -652,6 +698,9 @@ svg,
             font-weight: 500;
             font-size: 17.78px;
             text-transform: uppercase;
+                @media (max-width: $xs) {
+                    font-size: 15px;
+                }
             span {
                 color: $color-accent-6;
             }
@@ -661,6 +710,12 @@ svg,
 
 .modal-privacy {
     &__content {
+        @media (max-width: $lg) {
+            font-size: 14px;
+        }
+        @media (max-width: $xs) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -670,6 +725,9 @@ svg,
     font-size: var(--fs-4);
     line-height: 1.18;
     text-transform: uppercase;
+    @media (max-width: $sm) {
+        font-size: 16px;
+    }
 }
 
 .u-title {
@@ -685,6 +743,12 @@ svg,
     font-size: var(--fs-3);
     line-height: 1.18;
     text-transform: uppercase;
+    @media (max-width: $lg) {
+        font-size: 20px;
+    }
+    @media (max-width: $sm) {
+        font-size: 16px;
+    }
 }
 
 .step-card {
@@ -708,6 +772,10 @@ svg,
         height: 90px;
         margin: 8px auto 42px;
         @extend .img-contain;
+        @media (max-width: $lg) {
+            width: 82px;
+            height: 82px;
+        }
     }
     &__header {
         padding: 0 10px;
@@ -724,6 +792,9 @@ svg,
         margin: 0;
         font-size: 16px;
         line-height: 1.18;
+        @media (max-width: $lg) {
+            font-size: 15px;
+        }
     }
     &__footer {
         margin-top: auto;
@@ -793,6 +864,14 @@ svg,
         border-radius: 50%;
         overflow: hidden;
         @extend .img-cover;
+        @media (max-width: $sm) {
+            margin-right: 28px;
+        }
+        @media (max-width: $xs) {
+            max-width: 64px;
+            height: 64px;
+            flex-basis: 64px;
+        }
     }
     &__info {
         &-name {
@@ -801,9 +880,21 @@ svg,
             font-size: var(--fs-3);
             line-height: 1;
             color: $color-accent-1;
+            @media (max-width: $sm) {
+                font-size: 30px;
+            }
+            @media (max-width: $xs) {
+                font-size: 26px;
+            }
         }
         &-age {
             font-size: 22px;
+            @media (max-width: $sm) {
+                font-size: 21px;
+            }
+            @media (max-width: $xs) {
+                font-size: 17px;
+            }
         }
     }
     &__text {
@@ -811,6 +902,9 @@ svg,
         line-height: 1.18;
         color: $color-gray-3;
         letter-spacing: -.005em;
+        @media (max-width: $sm) {
+            font-size: 17px;
+        }
     }
 }
 
@@ -870,9 +964,19 @@ svg,
     }
     &__title {
         margin: 0 0 30px;
+        @media (max-width: $lg) {
+            font-size: 28px;
+        }
+        @media (max-width: $sm) {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
     }
     &__list {
         margin: 0 0 24px;
+        @media (max-width: $sm) {
+            font-size: 14px;
+        }
     }
     &__footer {
         margin-top: auto;
@@ -888,6 +992,9 @@ svg,
         max-width: 400px;
         margin: 0;
         font-size: 20px;
+        @media (max-width: $sm) {
+            font-size: 14px;
+        }
         span {
             color: $color-accent-6;
         }
@@ -927,4 +1034,10 @@ svg,
         height: auto;
         display: block;
     }
+}
+
+.gallery-picture {
+    padding-bottom: 56.25%;
+    display: block;
+    @extend .img-cover;
 }
